@@ -44,6 +44,14 @@ Route::get('/yonetici', function () {
 Route::get('/sistemyont', function () {
     return view('yoneticigiris');
 });
+<<<<<<< HEAD
+=======
+
+Route::get('/dene', function () {
+    return view('deneme');
+});
+
+>>>>>>> ec1f09b2397c3a452727270dcc150d624ff1306e
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
