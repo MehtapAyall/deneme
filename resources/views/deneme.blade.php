@@ -18,8 +18,12 @@
     if($_GET){
 
     $deger=$_GET['al'];
-
-    
+    $sonuc = str_word_count($deger);
+    if((int)$sonuc > 5)
+    echo "büyük";
+    else
+    echo "tamam";
+    }
 ?> 
 
 </body>
