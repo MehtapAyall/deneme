@@ -30,9 +30,20 @@ Route::get('/kayitol', function () {
 });
 
 Route::get('/ogrAnasayfa', function () {
-    return view('ogrenciAnasayfa');
+    return view('ogrencianasayfa');
 });
-
+Route::get('/danismananasayfa', function () {
+    return view('danismananasayfa');
+});
+Route::get('/danismankyt', function () {
+    return view('danismankyt');
+});
+Route::get('/yonetici', function () {
+    return view('yonetici');
+});
+Route::get('/sistemyont', function () {
+    return view('yoneticigiris');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

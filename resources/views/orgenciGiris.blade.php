@@ -30,6 +30,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/dnmGiris">Danışman Giriş</a>
+          
         </li>
       </ul>
 
@@ -46,7 +47,7 @@
             <tr><td colspan="2" style="text-align:center;"><h1>Öğrenci Giriş Sayfası</h1></td></tr>
             <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" > </th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"><button class="btn btn-danger">Kayıt Ol</button> </td><th><button class="btn btn-warning">Giriş Yap</button> </th></tr>
+            <tr><td style="text-align:right;"><button class="btn btn-danger" onclick="location='/kayitol'">Kayıt Ol</button> </td><th><button class="btn btn-warning" onclick="location='/ogrAnasayfa'">Giriş Yap</button> </th></tr>
             </table>
         </div>
       </div>

@@ -31,7 +31,7 @@
           <a class="nav-link" href="#">Bilgilerim</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Çıkış Yap</a>
+          <a class="nav-link" href="/">Çıkış Yap</a>
         </li>
       </ul>
 

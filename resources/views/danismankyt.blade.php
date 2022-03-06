@@ -40,35 +40,22 @@
     </header>
 
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
-      <div class="container">
+    <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
         <form method="post" action="kayitol" enctype="multipart/form-data">
         @csrf
         <center>
             <table class="table table-dark table-striped" style="width:500px">
-            <tr><td colspan="2" style="text-align:center;"><h1>Öğrenci Kayıt Sayfası</h1></td></tr>
-            <tr><td colspan="2"><center> <input type="file" name="image" required class="course form-control" style="width: 300px;"> </center></td></tr>
-            <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" > </th></tr>
+            <tr><td colspan="2" style="text-align:center;"><h1>Danışman Kayıt Sayfası</h1></td></tr>
+            <tr><td colspan="2"><center>  </center></td></tr>
             <tr><td style="text-align:right;"> <label for="">Ad:</label></td> <th> <input type="text" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Soyad:</label></td> <th> <input type="text" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre Tekrarı:</label></td> <th> <input type="text" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Telefon:</label></td> <th> <input name="telefon"type="tel" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Fakülte:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Bölüm:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Sınıf:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Danışman Seç:</label></td> <th>
-            <select name="danisman">
-                <option> Danışman Seçiniz </option>
-                <option> Mustafa Günbatımı </option>
-                <option> Ayşe Solmaz </option>
-                <option> Hüseyin Okyanusoğlu </option>
-                <option> Günnur Salar </option>
-                <option> Müzeyyen Korkmaz </option>
-            </select>
-            </th></tr>
-            <tr><td style="text-align:right;"><button class="btn btn-danger" onclick="location='/sifre'">Şifremi Unutum</button> </td><th><button class="btn btn-warning" onclick="location='/ogrGiris'">Kayıt Ol</button> </th></tr>
+            <tr><td style="text-align:right;"> <label for="">Ünvan:</label></td> <th> <input name="telefon"type="tel" ></th></tr>
+           
+            <tr><td style="text-align:right;"> </td><th><button class="btn btn-warning" onclick="location='/danismananasayfa'">Kayıt Ol</button> </th></tr>
             </table></center>
         </form>
         </div>
