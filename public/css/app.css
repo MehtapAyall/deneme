@@ -328,13 +328,40 @@ th {
 label {
   display: inline-block;
 }
+.ibuton{
+    
+  width: 150px;
+  height: 50px;
+  border: 0ch;
+  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.205);    
+
+}
 
 button {
   border-radius: 0;
+  width: 200px;
+  height: 200px;
+  border: 0ch;
+  
+  border-radius: 1%;
+  
+}
+button:hover{
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:active {
+
+  background-color: #5f5f5f;
+
+  box-shadow: 0 5px rgba(39, 39, 39, 0.699);
+
+  transform: translateY(4px);
 }
 
+
 button:focus:not(:focus-visible) {
-  outline: 0;
+  outline: #04414d;
 }
 
 input,
@@ -2226,6 +2253,7 @@ progress {
 .form-control:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
+  
 }
 .form-control::placeholder {
   color: #6c757d;

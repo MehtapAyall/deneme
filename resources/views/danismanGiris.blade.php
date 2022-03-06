@@ -41,9 +41,13 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
-          <h1><span class="text-warning">PROJE TAKİP SİSTEMİ</span></h1>
-          <H4><span class="text-warning">KOCAELİ ÜNİVERSİTESİ</span></H4>
-          <H2><span class="text-warning">HOŞGELDİNİZ...</span></H2>
+            
+            <table class="table table-dark table-striped">
+            <tr><td colspan="2" style="text-align:center;"><h1>Danışman Giriş Sayfası</h1></td></tr>
+            <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" > </th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
+            <tr><td style="text-align:right;"> </td><th><button class="btn btn-warning">Giriş Yap</button> </th></tr>
+            </table>
         </div>
       </div>
     </section>

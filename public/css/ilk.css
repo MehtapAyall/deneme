@@ -1,0 +1,11 @@
+.koyu_arkaplan {
+    background-image: linear-gradient(rgba(151, 10, 10, 0.404), rgba(151, 10, 10, 0.404));
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.koyu_arkaplan .container {
+  height: 100vh;
+}
+
+

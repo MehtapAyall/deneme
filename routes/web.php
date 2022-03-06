@@ -14,11 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('anasayfa');
+    return view('anasayfa') ;
 });
 
-Route::get('/m', function () {
-    return view('menu');
+Route::get('/ogrGiris', function () {
+    return view('orgenciGiris');
+});
+
+Route::get('/dnmGiris', function () {
+    return view('danismanGiris');
+});
+
+Route::get('/kayitol', function () {
+    return view('kayitOl');
+});
+
+Route::get('/ogrAnasayfa', function () {
+    return view('ogrenciAnasayfa');
 });
 
 Auth::routes();
