@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ogrenci', function (Blueprint $table) {
             $table->id('ogrID');
-            $table->string('Ad');
+            $table->string('ad');
             $table->string('soyad');
             $table->string('ogrNo');
             $table->string('fakulte');
