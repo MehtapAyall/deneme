@@ -13,11 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('proje', function (Blueprint $table) {
-            $table->id('projeNo');
-            $table->string('projeTanım');
-            $table->datetime('baslamaTarihi');
-            $table->datetime('bitisTarihi');
+        Schema::create('ogrenci', function (Blueprint $table) {
+            $table->id('ogrID');
+            $table->string('ad');
+            $table->string('soyad');
+            $table->string('ogrNo');
+            $table->string('fakulte');
+            $table->string('bolum');
+            $table->string('sınıf');
+            $table->string('telefon');
+            $table->string('ePosta');
             $table->timestamps();
         });
     }
@@ -29,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proje');
+        Schema::dropIfExists('ogrenci');
     }
 };

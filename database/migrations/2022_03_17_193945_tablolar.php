@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('unvan', function (Blueprint $table) {
-            $table->varchar('unvanNo');
-            $table->varchar('unvanAd');
+            $table->string('unvanNo');
+            $table->string('unvanAd');
+            $table->timestamps();
         });
     }
 

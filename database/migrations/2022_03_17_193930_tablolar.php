@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('gorevlendirme', function (Blueprint $table) {
             $table->id('gorevlendirmeNo');
-            $table->varchar('projeNo');
-            $table->varchar('personelNo');
+            $table->string('projeNo');
+            $table->string('personelNo');
+            $table->timestamps();
         });
     }
 
