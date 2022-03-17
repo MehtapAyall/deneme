@@ -42,18 +42,18 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
     <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
-        <form method="post" action="kayitol" enctype="multipart/form-data">
+        <form method="post" action="danismankayitol" enctype="multipart/form-data">
         @csrf
         <center>
             <table class="table table-dark table-striped" style="width:500px">
             <tr><td colspan="2" style="text-align:center;"><h1>Danışman Kayıt Sayfası</h1></td></tr>
             <tr><td colspan="2"><center>  </center></td></tr>
-            <tr><td style="text-align:right;"> <label for="">Ad:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Soyad:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Ad:</label></td> <th> <input type="text" name="danismanadi"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Soyad:</label></td> <th> <input type="text" name="danismansoyad" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" name="danisman sifre"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre Tekrarı:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Ünvan:</label></td> <th> <input name="telefon"type="tel" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" naem="danismansifre"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Ünvan:</label></td> <th> <input name="danismanunvan"type="text" ></th></tr>
            
             <tr><td style="text-align:right;"> </td><th><button class="btn btn-warning" onclick="location='/danismananasayfa'">Kayıt Ol</button> </th></tr>
             </table></center>
