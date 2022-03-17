@@ -48,16 +48,16 @@
             <table class="table table-dark table-striped" style="width:500px">
             <tr><td colspan="2" style="text-align:center;"><h1>Öğrenci Kayıt Sayfası</h1></td></tr>
             <tr><td colspan="2"><center> <input type="file" name="image" required class="course form-control" style="width: 300px;"> </center></td></tr>
-            <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" > </th></tr>
-            <tr><td style="text-align:right;"> <label for="">Ad:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Soyad:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" name="ogrencino"> </th></tr>
+            <tr><td style="text-align:right;"> <label for="">Ad:</label></td> <th> <input type="text" name="ogrenciadi" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Soyad:</label></td> <th> <input type="text" name="ogrencisoyad"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" name="ogrencisifre" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre Tekrarı:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Telefon:</label></td> <th> <input name="telefon"type="tel" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Fakülte:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Bölüm:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Sınıf:</label></td> <th> <input type="text" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" name="ogrenciemail"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Telefon:</label></td> <th> <input name="telefon"type="tel" name="ogrencitelefon"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Fakülte:</label></td> <th> <input type="text" name="ogrencifakulte"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Bölüm:</label></td> <th> <input type="text" name="ogrencibolum"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Sınıf:</label></td> <th> <input type="text" name="ogrencisinif" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Danışman Seç:</label></td> <th>
             <select name="danisman">
                 <option> Danışman Seçiniz </option>

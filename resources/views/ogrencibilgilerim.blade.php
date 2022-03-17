@@ -7,9 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <link href="css/ilk.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/app.css">
     <title>Öğrenci Anasayfası</title>
   </head>
   <body>
@@ -23,14 +22,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Anasayfa</a>
+          <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/ogrGiris">Öğrenci Giriş</a>
+          <a class="nav-link" href="#">Danışman</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/dnmGiris">Danışman Giriş</a>
-          
+          <a class="nav-link" href="#">Bilgilerim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Çıkış Yap</a>
         </li>
       </ul>
 
@@ -38,26 +39,21 @@
   </div>
 </nav>
     </header>
-
-    <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
+    <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});">
       <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
-            <form action="{{ route('kayitkontrol') }}" method="post">
-            @if(Session::get('fail'))
-            <div class="alert alert-danger">
-                  {{ Session::get('fail') }}
-               </div>
-            @endif
-            @csrf
-            <table class="table table-dark table-striped">
-            <tr><td colspan="2" style="text-align:center;"><h1>Öğrenci Giriş Sayfası</h1></td></tr>
-            <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text"  name="ogrencino" value="{{ old('no') }}"> <span class="text-danger">@error('no'){{ $message }} @enderror</span> </th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text"  name="ogrencisifre"><span class="text-danger">@error('sifre'){{ $message }} @enderror</span></th></tr>
-            <tr><td style="text-align:right;"><button class="btn btn-danger" onclick="location='/kayitol'">Kayıt Ol</button> </td><th><button class="btn btn-warning" onclick="location='/ogrAnasayfa'">Giriş Yap</button> </th></tr>
-            </table></form>
-            
-        </div>
-      </div>
+          <table class="table table-dark table-sm" >
+            <tr><td >Öğrenci Numara:</td> <td >{{ $LoggedUserInfo['ogrencino'] }}</td></tr>
+            <tr><td >İsim:</td> <td >{{ $LoggedUserInfo['ogrenciadi'] }}</td></tr>
+            <tr><td >Soyisim:</td> <td >{{ $LoggedUserInfo['ogrencisoyad'] }}</td></tr>
+            <tr><td >Telefon:</td> <td >{{ $LoggedUserInfo['ogrencitelefon'] }}</td></tr>
+            <tr><td >E-mail:</td> <td >{{ $LoggedUserInfo['ogrenciemail'] }} </td> </tr>
+            <tr><td >Fakülte:</td> <td >{{ $LoggedUserInfo['ogrencifakulte'] }} </td> </tr>
+            <tr><td >Bölüm:</td> <td >{{ $LoggedUserInfo['ogrencibolum'] }}</td></tr>
+            <tr><td >Sınıf:</td> <td >{{ $LoggedUserInfo['ogrencisinif'] }}</td></tr>
+          </table>
+        </div> 
+      </div>   
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

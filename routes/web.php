@@ -44,6 +44,12 @@ Route::get('/yonetici', function () {
 Route::get('/sistemyont', function () {
     return view('yoneticigiris');
 });
+Route::get('/ogrencibilgileri', function () {
+    return view('ogrencibilgilerim');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/ogrencibilgileri',[App\Http\Controllers\verialmaislemleri::class, 'bilgileriyolla']);
+Route::post('/kayitol', [App\Http\Controllers\verialmaislemleri::class, 'verialma'])->name('kayitols');
+Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
