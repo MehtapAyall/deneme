@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('sisteYonetici', function (Blueprint $table) {
             $table->id('yoneticiID');
-            $table->varchar('ad');
-            $table->varchar('soyad');
-            $table->varchar('unvan');
-            $table->varchar('ePosta');
+            $table->string('ad');
+            $table->string('soyad');
+            $table->string('unvan');
+            $table->string('ePosta');
+            $table->timestamps();
         });
     }
 

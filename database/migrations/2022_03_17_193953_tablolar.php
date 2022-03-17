@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('bolum', function (Blueprint $table) {
             $table->id();
-            $table->varchar('ad');
-            $table->varchar('fakulteId');
+            $table->string('ad');
+            $table->string('fakulteId');
+            $table->timestamps();
         });
     }
 

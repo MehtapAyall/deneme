@@ -15,14 +15,15 @@ return new class extends Migration
     {
         Schema::create('ogrenci', function (Blueprint $table) {
             $table->id('ogrID');
-            $table->varchar('ad');
-            $table->varchar('soyad');
-            $table->varchar('ogrNo');
-            $table->varchar('fakulte');
-            $table->varchar('bolum');
-            $table->varchar('sınıf');
-            $table->varchar('telefon');
-            $table->varchar('ePosta');
+            $table->string('Ad');
+            $table->string('soyad');
+            $table->string('ogrNo');
+            $table->string('fakulte');
+            $table->string('bolum');
+            $table->string('sınıf');
+            $table->string('telefon');
+            $table->string('ePosta');
+            $table->timestamps();
         });
     }
 
