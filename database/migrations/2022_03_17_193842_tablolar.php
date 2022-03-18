@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('proje', function (Blueprint $table) {
+        Schema::create('projes', function (Blueprint $table) {
             $table->id('projeNo');
             $table->string('projeTanım');
             $table->datetime('baslamaTarihi');
             $table->datetime('bitisTarihi');
-            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proje');
+        Schema::dropIfExists('projes');
     }
 };

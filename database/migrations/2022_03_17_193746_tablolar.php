@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sisteYonetici', function (Blueprint $table) {
+        Schema::create('sistem_yoneticis', function (Blueprint $table) {
             $table->id('yoneticiID');
             $table->string('ad');
             $table->string('soyad');
             $table->string('unvan');
             $table->string('ePosta');
-            $table->timestamps();
         });
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sisteYonetici');
+        Schema::dropIfExists('sisteYoneticis');
     }
 };

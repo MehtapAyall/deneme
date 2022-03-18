@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ogrenci', function (Blueprint $table) {
+        Schema::create('ogrencis', function (Blueprint $table) {
             $table->id('ogrID');
             $table->string('ad');
             $table->string('soyad');
@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('sınıf');
             $table->string('telefon');
             $table->string('ePosta');
-            $table->timestamps();
         });
     }
 
@@ -34,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ogrenci');
+        Schema::dropIfExists('ogrencis');
     }
 };
