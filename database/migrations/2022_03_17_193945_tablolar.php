@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('unvan', function (Blueprint $table) {
+        Schema::create('unvans', function (Blueprint $table) {
             $table->string('unvanNo');
             $table->string('unvanAd');
-            $table->timestamps();
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unvan');
+        Schema::dropIfExists('unvans');
     }
 };

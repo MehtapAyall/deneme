@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bolum', function (Blueprint $table) {
+        Schema::create('bolums', function (Blueprint $table) {
             $table->id();
             $table->string('ad');
             $table->string('fakulteId');
-            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bolum');
+        Schema::dropIfExists('bolums');
     }
 };

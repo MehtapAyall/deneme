@@ -53,3 +53,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/ogrencibilgileri',[App\Http\Controllers\verialmaislemleri::class, 'bilgileriyolla']);
 Route::post('/kayitol', [App\Http\Controllers\verialmaislemleri::class, 'verialma'])->name('kayitols');
 Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
+Route::get('/yonetici','App\Http\Controllers\kaydet@goster')->name('goster');
+Route::get('/yonetici','App\Http\Controllers\kaydet@danisan')->name('danisan');
