@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ogrencis', function (Blueprint $table) {
-            $table->id('ogrID');
+        Schema::create('sistemyoneticisis', function (Blueprint $table) {
+            $table->id('yoneticiID');
             $table->string('ad');
             $table->string('soyad');
-            $table->string('ogrNo');
-            $table->string('fakulte');
-            $table->string('bolum');
-            $table->string('sınıf');
-            $table->string('telefon');
+            $table->string('unvan');
             $table->string('ePosta');
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ogrencis');
+        Schema::dropIfExists('sistemyoneticisis');
     }
 };

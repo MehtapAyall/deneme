@@ -75,7 +75,7 @@
             </tr>
             </thead>
             <tbody>
-              @isset($ogrenci)
+              
                 <tr>
                     @foreach($ogrenci as $key => $ogr)
                         <td>{{$ogr->ad}}</td>
@@ -87,7 +87,7 @@
                         <td>{{$ogr->telefon}}</td>
                         <td>{{$ogr->eposta}}</td>
                     @endforeach
-                    @endisset
+                   
                 </tr>
             </tbody>
         </tale>
@@ -114,7 +114,7 @@
                 <th>E Posta</th>
             </tr>
             </thead>
-            @isset($danisan)
+           
             <tbody>
                 <tr>
                     @foreach($danisan as $key => $dns)
@@ -123,7 +123,7 @@
                         <td>{{$dns->unvan}}</td>
                         <td>{{$dns->ePosta}}</td>
                     @endforeach
-                    @endisset
+                    
                 </tr>
             </tbody>
         </tale>

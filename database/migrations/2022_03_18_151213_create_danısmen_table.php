@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('danisan_hocas', function (Blueprint $table) {
+        Schema::create('danısmen', function (Blueprint $table) {
             $table->id('danisanID');
             $table->string('ad');
             $table->string('soyad');
             $table->string('unvan');
             $table->string('ePosta');
             $table->string('sifre');
-            $table->timestamps();
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('danisan_hocas');
+        Schema::dropIfExists('danısmen');
     }
 };

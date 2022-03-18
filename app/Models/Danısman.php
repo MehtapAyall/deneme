@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class danisan_hoca extends Model
+class Danısman extends Model
 {
     use HasFactory;
 }

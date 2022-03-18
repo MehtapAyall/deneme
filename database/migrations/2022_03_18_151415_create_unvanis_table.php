@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sistem_yoneticis', function (Blueprint $table) {
-            $table->id('yoneticiID');
-            $table->string('ad');
-            $table->string('soyad');
-            $table->string('unvan');
-            $table->string('ePosta');
+        Schema::create('unvanis', function (Blueprint $table) {
+            $table->string('unvanNo');
+            $table->string('unvanAd');
         });
     }
 
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sisteYoneticis');
+        Schema::dropIfExists('unvanis');
     }
 };

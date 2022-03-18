@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('gorevlendirmes', function (Blueprint $table) {
-            $table->id('gorevlendirmeNo');
-            $table->string('projeNo');
-            $table->string('personelNo');
+        Schema::create('projelers', function (Blueprint $table) {
+            $table->id('projeNo');
+            $table->string('projeTanım');
+            $table->datetime('baslamaTarihi');
+            $table->datetime('bitisTarihi');
         });
     }
 
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gorevlendirmes');
+        Schema::dropIfExists('projelers');
     }
 };
