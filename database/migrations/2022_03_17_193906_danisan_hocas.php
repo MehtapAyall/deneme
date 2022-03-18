@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('soyad');
             $table->string('unvan');
             $table->string('ePosta');
+            $table->string('sifre');
             $table->timestamps();
         });
     }

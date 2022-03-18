@@ -54,7 +54,7 @@
             <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" name="ogrencisifre" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre Tekrarı:</label></td> <th> <input type="text" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" name="ogrenciemail"></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Telefon:</label></td> <th> <input name="telefon"type="tel" name="ogrencitelefon"></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Telefon:</label></td> <th> <input type="tel" name="ogrencitelefon"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Fakülte:</label></td> <th> <input type="text" name="ogrencifakulte"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Bölüm:</label></td> <th> <input type="text" name="ogrencibolum"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Sınıf:</label></td> <th> <input type="text" name="ogrencisinif" ></th></tr>
