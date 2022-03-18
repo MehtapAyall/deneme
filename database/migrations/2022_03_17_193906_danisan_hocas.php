@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('danisan_hoca');
+        Schema::dropIfExists('danisan_hocas');
     }
 };

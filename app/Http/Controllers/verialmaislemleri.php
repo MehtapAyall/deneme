@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ogrencikayitBilgi;
+use App\Models\OgrencikayitBilgi;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
+use App\Models\Danisan_hoca;
 use Validator, Input, Redirect;
 
 class verialmaislemleri extends Controller
 {
     public function verialma (Request $req)
     {
-      $ogrenci = new ogrencikayitBilgi();
+      $ogrenci = new OgrencikayitBilgi();
       $ogrenci->ogrenciadi=$req->ogrenciadi;
       $ogrenci->ogrencino=$req->ogrencino;
       $ogrenci->ogrencisoyad=$req->ogrencisoyad;
@@ -42,7 +43,7 @@ class verialmaislemleri extends Controller
 
         ]);
 
-        $userInfo = ogrencikayitBilgi::where('ogrencino','=', $request->ogrencino)->first();
+        $userInfo = OgrencikayitBilgi::where('ogrencino','=', $request->ogrencino)->first();
 
         if(!$userInfo){
             return back()->with('fail','Numaraya kayıtlı Ögrenci yok');
@@ -59,8 +60,9 @@ class verialmaislemleri extends Controller
     }
 
     function bilgileriyolla(){
-        $data = ['LoggedUserInfo'=>ogrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
+        $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
         return view('ogrencibilgilerim', $data);
  
     }
+    
 }

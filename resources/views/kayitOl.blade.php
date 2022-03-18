@@ -42,7 +42,7 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
-        <form method="post" action="kayitol" enctype="multipart/form-data">
+        <form method="post" action="{{route('kayitol')}}" enctype="multipart/form-data">
         @csrf
         <center>
             <table class="table table-dark table-striped" style="width:500px">
