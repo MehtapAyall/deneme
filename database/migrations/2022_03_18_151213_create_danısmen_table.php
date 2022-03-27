@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('danısmen', function (Blueprint $table) {
-            $table->id('danisanID');
+        Schema::create('danısmens', function (Blueprint $table) {
+            $table->id('id');
             $table->string('ad');
             $table->string('soyad');
             $table->string('unvan');

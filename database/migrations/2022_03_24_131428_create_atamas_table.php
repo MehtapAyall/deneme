@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('danısman', function (Blueprint $table) {
-            $table->id('danisanID');
-            $table->string('ad');
-            $table->string('soyad');
-            $table->string('unvan');
-            $table->string('ePosta');
-            $table->string('sifre');
+        Schema::create('atamas', function (Blueprint $table) {
+            $table->id();
+            $table->string('ogrno');
+            $table->string('ograd');
+            $table->string('danisman')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('danısman');
+        Schema::dropIfExists('atamas');
     }
 };
