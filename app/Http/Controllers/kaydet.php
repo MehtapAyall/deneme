@@ -3,22 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\OgrencikayitBilgi;
 use App\Models\Danısman;
+use App\Models\Projeler;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\CollectionstdClass;
 
 class kaydet extends Controller
 {
-    public function goster(){
-            $ogrenci = DB::table('ogrencikayit_bilgis') ->get();
-            return view('yonetici', ['ogrencikayit_bilgis' => $ogrenci]);
-        
+    public function ekle()
+    {
+        return view('danisanekle');
     }
-
-    public function danisan(){
-        $danisan = Danısman::all();
-
-        return view('yonetici',array('danisan_hocas'=>$danisan));
+    public function ekle_post(Request $req)
+    {
+        $deger = new Danısman;
+        $deger->ad = $req->input('ad');
+        $deger->soyad = $req->input('soyad');
+        $deger->unvan = $req->input('unvan');
+        $deger->sifre = $req->input('sifre');
+        $deger->ePosta = $req->input('posta');
+        $deger->save();
+        return redirect('danisanekle');
     }
 }

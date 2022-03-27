@@ -26,7 +26,7 @@
           <a class="nav-link active" aria-current="page" href="/">Anasayfa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/danisanekle">Danışman Ekle</a>
+          <a class="nav-link" href="#">Danışman Ekle</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Öğrenci Ekle</a>
@@ -44,26 +44,29 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container">
 
-      <table>
+          <form action='/danisanekle' method='post'>
+            {{ csrf_field() }}
+            <div class="mb-3">
+              <input type="text" class="form-control" name="ad"  placeholder="Ad">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="soyad" placeholder="Soyad">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="unvan" placeholder="Unvan">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="sifre" placeholder="Şifre">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="posta" placeholder="E-posta">
+            </div>
+            <button type="submit" class="btn btn-primary">KAYDET</button>
+          </form>
         
-        <tr>
-          <td>ad</td>
-        </tr> 
-        @foreach($ogrencikayit_bilgis as $ogr)
-        <tr>
-          <td>{{$ogr['id']}}</td>
-        </tr>
-        @endforeach
-      </table>
-
       </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
-
-
-
-  </body>
+</body>
 </html>
