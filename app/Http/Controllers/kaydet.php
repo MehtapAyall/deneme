@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Danısman;
+use App\Models\Danısmen;
 use App\Models\Projeler;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\CollectionstdClass;
+use Illuminate\Support\Facades\Hash;
 
 class kaydet extends Controller
 {
@@ -16,7 +17,7 @@ class kaydet extends Controller
     }
     public function ekle_post(Request $req)
     {
-        $deger = new Danısman;
+        $deger = new Danısmen;
         $deger->ad = $req->input('ad');
         $deger->soyad = $req->input('soyad');
         $deger->unvan = $req->input('unvan');
