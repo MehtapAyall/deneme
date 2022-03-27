@@ -11,8 +11,8 @@ use Illuminate\Support\CollectionstdClass;
 class Vericekme extends Controller
 {
     public function goster(){
-        $ogrenci = DB::table('OgrencikayitBilgi') ->get();
-        return view('yonetici', ['OgrencikayitBilgi' => $ogrenci]);
+        $ogrenci = OgrencikayitBilgi::all();
+        return view('yonetici', ['ogrencikayit_bilgis' => $ogrenci]);
     
 }
 }

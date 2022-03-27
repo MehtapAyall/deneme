@@ -26,7 +26,7 @@
           <a class="nav-link active" aria-current="page" href="/">Anasayfa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/danisanekle">Danışman Ekle</a>
+          <a class="nav-link" href="#">Danışman Ekle</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Öğrenci Ekle</a>
@@ -43,18 +43,83 @@
 
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container">
+       
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Öğrenciler
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+      Danışanlar
+    </button>
 
-      <table>
-        
-        <tr>
-          <td>ad</td>
-        </tr> 
-        @foreach($ogrencikayit_bilgis as $ogr)
-        <tr>
-          <td>{{$ogr['id']}}</td>
-        </tr>
-        @endforeach
-      </table>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Öğreni Listesi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <table class="width:700px">
+            <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Öğrenci No</th>
+                <th>Fakülte</th>
+                <th>Bölüm</th>
+                <th>Sınıf</th>
+                <th>Telefon</th>
+                <th>E Posta</th>
+            </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                    @foreach($ogrencikayit_bilgis as $key => $item)
+                        <td>{{$item['id']}}</td>
+                      
+                    @endforeach
+                   
+                </tr>
+            </tbody>
+        </tale>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Öğreni Listesi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <table class="width:700px">
+            <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Unvan</th>
+                <th>E Posta</th>
+            </tr>
+            </thead>
+           
+            <tbody>
+                <tr>
+                   
+                    
+                </tr>
+            </tbody>
+        </tale>
+          </div>
+        </div>
+      </div>
+    </div>
 
       </div>
     </section>
