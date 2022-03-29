@@ -64,3 +64,6 @@ Route::post('/dnmGiris',[App\Http\Controllers\DanismanController::class,'danisko
 Route::get('danisanekle','App\Http\Controllers\kaydet@ekle');
 Route::post('danisanekle','App\Http\Controllers\kaydet@ekle_post');
 
+Route::get('ogrencianasayfa','App\Http\Controllers\kaydet@proje');
+Route::post('ogrencianasayfa','App\Http\Controllers\kaydet@proje_post');
+

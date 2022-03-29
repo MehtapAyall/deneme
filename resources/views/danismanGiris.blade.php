@@ -55,7 +55,7 @@
             <tr><td colspan="2" style="text-align:center;"><h1>Danışman Giriş Sayfası</h1></td></tr>
             <tr><td style="text-align:right;"> <label for="">Adı:</label></td> <th> <input type="text"  name="dad"> </th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" name="dsifre"></th></tr>
-            <tr><th><button class="btn btn-warning" onclick="location='/danismananasayfa'">Giriş Yap</button> </th></tr>                   
+            <tr><td colspan="2" style="text-align:center"><button class="btn btn-warning" onclick="location='/danismananasayfa'">Giriş Yap</button> </td></tr>                   
             </table>
           </div>
         </div>

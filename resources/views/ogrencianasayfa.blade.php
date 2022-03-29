@@ -42,47 +42,30 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});">
     
   
-    <div class="container"><br><br><br><br><br><br><br><br>
-        
-        <div class="row ">
-            <div class="col-2"></div>
-            <div class="col-3">
-                    <button type="submit" class="button" style="background-color: rgb(221, 208, 23);">PROJE <br> BASLIGI <input type="text" placeholder="baslık giriniz"></button>
-            </div>
-            <div class="col-3">
-                
-                    <button id="amac" type="submit" class="button" style="background-color: rgb(253, 160, 53);">AMAC <br>ONEM <br>KAPSAM</button>
-            </div>
-            <div class="col-2">
-                    <button type="submit" class="button" style="background-color: rgb(255, 41, 13);">METARYEL <br>YONTEM <br>ARASTIRMA OLANAKLARI</button>
-           
-        </div><br>
-    </div><br>
-    <div class="row">
-        <div class="col-4"><br></br></div>
-        
-        <div class="col"><h3>Projenizle İlişkili 5 kelime giriniz</h3></div>
-    
-    </div>
-        <div class="row">
-            <div class="col-4">
-                
-            </div>
-            <div class="col-2"><input type="text" placeholder="kelime giriniz">
-            <div class="col"><input type="text" placeholder="kelime giriniz"></div>
-            <div class="col"><input type="text" placeholder="kelime giriniz"></div>
-            <div class="col"><input type="text" placeholder="kelime giriniz"></div>
-            <div class="col"><input type="text" placeholder="kelime giriniz"></div>
-        </div>
-            
-            <div class="col-4" ><br><button class="ibuton">Kontrol et</button>
-            <div class="col"><button class="ibuton" style="background-color:red">Benzerlerini Goster</button></div>
-            
-         </div>
-            <div class="col"></div>
-        </div>
-        </section>
+    <div class="container"><br><br>
 
+      <form action='/ogrencianasayfa' method='post'>
+        {{ csrf_field() }}
+        <table style="background-color:#bbabd8; height:500px; width:900px;" >
+          <tr><td colspan="2" style="text-align:center"> <input type="text" name="baslik" placeholder="Proje başlığını girin" style="width:400px; height:50px;"> </td></tr>
+          <tr> <td><input class="form-control" placeholder="Amaç,önem,kapsam" name="amac" style="height: 100px"></td> 
+          <td> <input class="form-control" placeholder="Meteryal,yontem,olanak" name="meteryal" style="height: 100px"></td> </tr>
+          <tr>
+            <td colspan="2">
+            <input type="text" name="anahtar1" placeholder="1.Anahtar Kelime">
+            <input type="text" name="anahtar2" placeholder="2.Anahtar Kelime">
+            <input type="text" name="anahtar3" placeholder="3.Anahtar Kelime">
+            <input type="text" name="anahtar4" placeholder="4.Anahtar Kelime">
+            <input type="text" name="anahtar5" placeholder="5.Anahtar Kelime">
+            </td>
+          </tr>
+          <tr> <td colspan="2" style="text-align:center"> <button style=" height:50px; width: 200px;" class="btn btn-warning" onclick="location='#'">Başvur</button> 
+          <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrencianasayfa'">Benzerlik</button></td></tr>
+        
+        </table>
+        </form>
+    </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
