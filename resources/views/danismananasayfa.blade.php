@@ -38,7 +38,21 @@
     </header>
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});">
     <div class="container">
-        
+    
+        <div class="d-flex h-100 flex-column text-light justify-content-center" >
+          <table class="table table-dark table-sm" >
+          @foreach($ogrencisi as $ogr)
+                <tr>
+                    
+                        <td name="ogrencisi[]" >{{$ogr->ograd}}</td>
+                        <td name="ogrencisi[]" >{{$ogr->ogrno}}</td>
+                        
+                </tr>
+            @endforeach
+          </table>
+         
+        </div> 
+     
     </div>
    
         </section>

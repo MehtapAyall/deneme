@@ -57,6 +57,9 @@ Route::get('/ogrencibilgileri',[App\Http\Controllers\verialmaislemleri::class, '
 Route::post('/kayitol', [App\Http\Controllers\verialmaislemleri::class, 'verialma'])->name('kayitol');
 Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
 Route::get('/yonetici',[App\Http\Controllers\Vericekme::class,'goster'])->name('goster');
+Route::get('/danismananasayfa',[App\Http\Controllers\DanismanController::class,'ogrencileri'])->name('dogr');
+Route::post('/dnmGiris',[App\Http\Controllers\DanismanController::class,'daniskontrol'])->name('daniskontrol');
+
 
 Route::get('danisanekle','App\Http\Controllers\kaydet@ekle');
 Route::post('danisanekle','App\Http\Controllers\kaydet@ekle_post');

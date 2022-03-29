@@ -75,14 +75,22 @@
             </tr>
             </thead>
             <tbody>
-              
-                <tr>
-                    @foreach($ogrencikayit_bilgis as $key => $item)
-                        <td>{{$item['id']}}</td>
+            @foreach($ogrencikayit_bilgis as $key => $item)
+                <tr>                   
+                        <td>{{$item['ogrencino']}}</td>
+                        <td>{{$item['ogrenciadi']}}</td>
+                        <td>{{$item['ogrencisoyad']}}</td>
+                        
+                        <td>{{$item['ogrencibolum']}}</td>
+                        <td>{{$item['ogrencisinif']}}</td>
+                        <td>{{$item['ogrencitelefon']}}</td>
+                        <td>{{$item['ogrenciemail']}}</td>
+                        
                       
-                    @endforeach
+                   
                    
                 </tr>
+                @endforeach
             </tbody>
         </tale>
           </div>

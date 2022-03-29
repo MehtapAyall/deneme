@@ -43,15 +43,27 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
-            
+        <div class="d-flex h-100 flex-column text-light justify-content-center" >
+            <form action="{{ route('daniskontrol') }}" method="post">
+            @if(Session::get('fail'))
+            <div class="alert alert-danger">
+                  {{ Session::get('fail') }}
+               </div>
+            @endif
+            @csrf
             <table class="table table-dark table-striped">
             <tr><td colspan="2" style="text-align:center;"><h1>Danışman Giriş Sayfası</h1></td></tr>
-            <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" > </th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
-            <tr><td style="text-align:right;"><button class="btn btn-danger" onclick="location='/danismankyt'">Kayıt Ol</button> </td><th><button class="btn btn-warning" onclick="location='/danismananasayfa'">Giriş Yap</button> </th></tr>                   
+            <tr><td style="text-align:right;"> <label for="">Adı:</label></td> <th> <input type="text"  name="dad"> </th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" name="dsifre"></th></tr>
+            <tr><th><button class="btn btn-warning" onclick="location='/danismananasayfa'">Giriş Yap</button> </th></tr>                   
             </table>
+          </div>
         </div>
+     
+           
       </div>
+    </div>
+    </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
