@@ -59,6 +59,7 @@
             <input type="text" name="anahtar5" placeholder="5.Anahtar Kelime">
             </td>
           </tr>
+          <tr><td colspan="2" style="text-align:center"> <input type="text" name="num" placeholder="Numaranızı giriniz" style="width:400px; height:30px;"> </td></tr>
           <tr> <td colspan="2" style="text-align:center"> <button style=" height:50px; width: 200px;" class="btn btn-warning" onclick="location='#'">Başvur</button> 
           <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrencianasayfa'">Benzerlik</button></td></tr>
         

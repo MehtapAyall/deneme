@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('anahtar3');
             $table->string('anahtar4');
             $table->string('anahtar5');
+            $table->string('ogrID');
             $table->timestamps();
         });
     }

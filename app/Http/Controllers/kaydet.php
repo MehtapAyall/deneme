@@ -34,8 +34,9 @@ class kaydet extends Controller
         return view('ogrencianasayfa');
     }
     public function proje_post(Request $req)
-    {
+    {   
         
+
         $al = new Proje_basvuru;
         $al->baslik = $req->input('baslik');
         $al->amac = $req->input('amac');
@@ -45,6 +46,7 @@ class kaydet extends Controller
         $al->anahtar3 = $req->input('anahtar3');
         $al->anahtar4 = $req->input('anahtar4');
         $al->anahtar5 = $req->input('anahtar5');
+        $al->ogrID = $req->input('num');
         $al->save();
         return redirect('ogrencianasayfa');
     }
