@@ -46,6 +46,7 @@
                     
                         <td name="ogrencisi[]" >{{$ogr->ograd}}</td>
                         <td name="ogrencisi[]" >{{$ogr->ogrno}}</td>
+                        <td name="ogrencisi[]" > <button name='{{$ogr->ogrno}}'></button> </td>
                         
                 </tr>
             @endforeach

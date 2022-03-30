@@ -24,7 +24,7 @@ class kaydet extends Controller
         $deger->ad = $req->input('ad');
         $deger->soyad = $req->input('soyad');
         $deger->unvan = $req->input('unvan');
-        $deger->sifre = $req->input('sifre');
+        $deger->sifre=Hash::make($req->sifre);
         $deger->ePosta = $req->input('posta');
         $deger->save();
         return redirect('danisanekle');
