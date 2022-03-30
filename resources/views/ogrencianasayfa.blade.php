@@ -57,12 +57,14 @@
             <input type="text" name="anahtar3" placeholder="3.Anahtar Kelime">
             <input type="text" name="anahtar4" placeholder="4.Anahtar Kelime">
             <input type="text" name="anahtar5" placeholder="5.Anahtar Kelime">
+            <input type="hidden"name="danisman" value="{{ $LoggedUserInfo['danisman'] }}">
+            <input type="hidden"name="durum" value="beklemede">
             </td>
           </tr>
           <tr><td colspan="2" style="text-align:center"> <input type="text" name="num" placeholder="Numaranızı giriniz" style="width:400px; height:30px;"> </td></tr>
-          <tr><td colspan="2" style="text-align:center"> <input type="text" name="danisman" placeholder="Danışmanınızı giriniz" style="width:400px; height:30px;"> </td></tr>
-          <tr> <td colspan="2" style="text-align:center"> <button style=" height:50px; width: 200px;" class="btn btn-warning" onclick="location='#'">Başvur</button> 
-          <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrencianasayfa'">Benzerlik</button></td></tr>
+          <tr><td colspan="2" style="text-align:center"> </td></tr>
+          <tr> <td colspan="2" style="text-align:center"> <button style=" height:50px; width: 200px;" class="btn btn-warning" onclick="location='/ogrencianasayfa'">Başvur</button> 
+          <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrAnasayfa'">Benzerlik</button></td></tr>
         
         </table>
         </form>
