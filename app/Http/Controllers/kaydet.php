@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Danısmen;
+use App\Models\OgrencikayitBilgi;
+
 use App\Models\Projeler;
 use App\Models\proje_basvuru;
 use Illuminate\Support\Facades\DB;
@@ -35,7 +37,8 @@ class kaydet extends Controller
     }
     public function proje_post(Request $req)
     {   
-        
+               
+
 
         $al = new Proje_basvuru;
         $al->baslik = $req->input('baslik');
@@ -46,8 +49,11 @@ class kaydet extends Controller
         $al->anahtar3 = $req->input('anahtar3');
         $al->anahtar4 = $req->input('anahtar4');
         $al->anahtar5 = $req->input('anahtar5');
-        $al->ogrID = $req->input('num');
-        $al->save();
+        $al->ogrno = $req->input('num');
+        $al->danisman = $req->input('danisman');
+
+        $al->save();       
+
         return redirect('ogrencianasayfa');
     }
 }
