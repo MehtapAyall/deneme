@@ -51,6 +51,7 @@
             <tr><td >Fakülte:</td> <td >{{ $LoggedUserInfo['ogrencifakulte'] }} </td> </tr>
             <tr><td >Bölüm:</td> <td >{{ $LoggedUserInfo['ogrencibolum'] }}</td></tr>
             <tr><td >Sınıf:</td> <td >{{ $LoggedUserInfo['ogrencisinif'] }}</td></tr>
+            <tr><td >Danisman:</td> <td >{{ $LoggedUserInfo['danisman'] }}</td></tr>
           </table>
         </div> 
       </div>   

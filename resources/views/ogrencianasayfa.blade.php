@@ -48,8 +48,8 @@
         {{ csrf_field() }}
         <table style="background-color:#bbabd8; height:500px; width:900px;" >
           <tr><td colspan="2" style="text-align:center"> <input type="text" name="baslik" placeholder="Proje başlığını girin" style="width:400px; height:50px;"> </td></tr>
-          <tr> <td><input class="form-control" placeholder="Amaç,önem,kapsam" name="amac" style="height: 100px"></td> 
-          <td> <input class="form-control" placeholder="Meteryal,yontem,olanak" name="meteryal" style="height: 100px"></td> </tr>
+          <tr> <td><input class="form-control" placeholder="Amaç,önem,kapsam" name="amac" style="height: 250px"></td> 
+          <td> <input class="form-control" placeholder="Meteryal,yontem,olanak" name="meteryal" style="height: 250px"></td> </tr>
           <tr>
             <td colspan="2">
             <input type="text" name="anahtar1" placeholder="1.Anahtar Kelime">
@@ -60,6 +60,7 @@
             </td>
           </tr>
           <tr><td colspan="2" style="text-align:center"> <input type="text" name="num" placeholder="Numaranızı giriniz" style="width:400px; height:30px;"> </td></tr>
+          <tr><td colspan="2" style="text-align:center"> <input type="text" name="danisman" placeholder="Danışmanınızı giriniz" style="width:400px; height:30px;"> </td></tr>
           <tr> <td colspan="2" style="text-align:center"> <button style=" height:50px; width: 200px;" class="btn btn-warning" onclick="location='#'">Başvur</button> 
           <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrencianasayfa'">Benzerlik</button></td></tr>
         
