@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('anahtar5')->nullable();
             $table->string('ogrno')->nullable();
             $table->string('danisman')->nullable();
-            $table->string('durum')->comment('beklemede');;
+            $table->string('durum')->default('beklemede');
             $table->timestamps();
         });
     }
