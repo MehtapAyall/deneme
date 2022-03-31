@@ -77,10 +77,17 @@
         
         </table>
         </form>
+<<<<<<< HEAD
         <form action="{{route('raporagec')}}" method="post">
           @csrf
           <button>rapor</button>
         </form>
+=======
+
+
+
+
+>>>>>>> 783d6ab126092902920b0b77c27d6ba1bece517e
     </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

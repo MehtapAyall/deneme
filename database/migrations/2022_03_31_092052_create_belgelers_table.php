@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('belge1')->nullable();
             $table->string('belge2')->nullable();
             $table->string('belge3')->nullable();
+            $table->string('pdf1')->nullable();
+            $table->string('pdf2')->nullable();
+            $table->string('pdf3')->nullable();
             $table->timestamps();
         });
     }
