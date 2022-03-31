@@ -160,7 +160,7 @@ class verialmaislemleri extends Controller
         return view('ogrencibilgilerim', $data);
  
     }
-    function ailgileriyolla(){
+    function abilgileriyolla(){
         $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
         return view('ogrencianasayfa', $data);
  

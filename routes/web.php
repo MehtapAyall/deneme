@@ -52,11 +52,15 @@ Route::get('/danisanekle', function () {
 });
 Route::get('/belgeler', function () {
     return view('belgeler');
+}); 
+Route::get('/danismanogr', function () {
+    return view('danismanogr');
 });
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/ogrencibilgileri',[App\Http\Controllers\verialmaislemleri::class, 'bilgileriyolla']);
+Route::get('/ogrAnasayfa',[App\Http\Controllers\verialmaislemleri::class, 'abilgileriyolla']);
 Route::post('/kayitol', [App\Http\Controllers\verialmaislemleri::class, 'verialma'])->name('kayitol');
 Route::post('/belgeler', [App\Http\Controllers\kaydet::class, 'belgeler'])->name('belge');
 
@@ -71,4 +75,3 @@ Route::post('danisanekle','App\Http\Controllers\kaydet@ekle_post');
 
 Route::get('ogrencianasayfa','App\Http\Controllers\kaydet@proje');
 Route::post('ogrencianasayfa','App\Http\Controllers\kaydet@proje_post');
-

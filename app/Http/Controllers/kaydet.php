@@ -33,7 +33,7 @@ class kaydet extends Controller
 
     public function proje()
     {
-        return view('ogrencianasayfa');
+        return view('ogrAnasayfa');
     }
     public function proje_post(Request $req)
     {   
@@ -51,10 +51,11 @@ class kaydet extends Controller
         $al->anahtar5 = $req->input('anahtar5');
         $al->ogrno = $req->input('num');
         $al->danisman = $req->input('danisman');
+        $al->durum = $req->input('durum');
 
         $al->save();       
 
-        return redirect('ogrencianasayfa');
+        return redirect('ogrAnasayfa');
     }
 
     public function belgeler(Request $req)

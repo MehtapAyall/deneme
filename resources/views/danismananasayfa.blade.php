@@ -43,10 +43,14 @@
           <table class="table table-dark table-sm" >
           @foreach($ogrencisi as $ogr)
                 <tr>
-                    
-                        <td name="ogrencisi[]" >{{$ogr->ograd}}</td>
                         <td name="ogrencisi[]" >{{$ogr->ogrno}}</td>
-                        <td name="ogrencisi[]" > <button name='{{$ogr->ogrno}}'></button> </td>
+                        <td name="ogrencisi[]" >{{$ogr->baslik}}</td>
+                        <td name="ogrencisi[]" >{{$ogr->amac}}</td>
+                        <td name="ogrencisi[]" >{{$ogr->meteryal}}</td>
+                        <td> <button class="btn btn-warning"></button>    </td>       
+
+                        
+                        <td name="ogrencisi[]" >  </td>
                         
                 </tr>
             @endforeach
