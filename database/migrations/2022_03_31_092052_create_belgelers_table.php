@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('belgelers', function (Blueprint $table) {
             $table->id();
             $table->string('ogrno');
+            $table->string('danisman');
             $table->string('belge1')->nullable();
             $table->string('belge2')->nullable();
             $table->string('belge3')->nullable();
