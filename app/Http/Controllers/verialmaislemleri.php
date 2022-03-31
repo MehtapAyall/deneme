@@ -50,7 +50,7 @@ class verialmaislemleri extends Controller
                     for ($i=1; $i < 5; $i++) { 
                         $ad = DB::table('danısmens')->find(1);#id si 1 olan danışmanı değişkene atama
                         DB::table('atamas')->where('id','=',$i)->update(['danisman' => $ad->ad]);
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
+                        DB::table('ogrencikayit_bilgis')->where('ogrencino','=',session('no'))->update(['danisman' => $ad->ad]);
                         #atama tablosuna id si 1 olan danışmanı id si 1 den 5 e kadar olan öğrencilere yazdırma
                     }
                 } catch (\Throwable $th) {
@@ -61,8 +61,7 @@ class verialmaislemleri extends Controller
                         for ($i=5; $i < 10; $i++) { 
                         $ad = DB::table('danısmens')->find(2);
                         DB::table('atamas')->where('id','=',$i)->update(['danisman' => $ad->ad]); 
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
+                        DB::table('ogrencikayit_bilgis')->where('ogrencino','=',session('no'))->update(['danisman' => $ad->ad]);
                     }
                     } catch (\Throwable $th) {
                        
@@ -73,8 +72,7 @@ class verialmaislemleri extends Controller
                         for ($i=10; $i < 15; $i++) { 
                         $ad = DB::table('danısmens')->find(3);
                         DB::table('atamas')->where('id','=',$i)->update(['danisman' => $ad->ad]);
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
-
+                        DB::table('ogrencikayit_bilgis')->where('ogrencino','=',session('no'))->update(['danisman' => $ad->ad]);
                     }
                     } catch (\Throwable $th) {
                         
@@ -83,8 +81,7 @@ class verialmaislemleri extends Controller
                         for ($i=15; $i < 20; $i++) { 
                         $ad = DB::table('danısmens')->find(4);
                         DB::table('atamas')->where('id','=',$i)->update(['danisman' => $ad->ad]);
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
-
+                        DB::table('ogrencikayit_bilgis')->where('ogrencino','=',session('no'))->update(['danisman' => $ad->ad]);
                     }
                     } catch (\Throwable $th) {
                         
@@ -93,8 +90,7 @@ class verialmaislemleri extends Controller
                         for ($i=20; $i < 25; $i++) { 
                         $ad = DB::table('danısmens')->find(5);
                         DB::table('atamas')->where('id','=',$i)->update(['danisman' => $ad->ad]);
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
-
+                        DB::table('ogrencikayit_bilgis')->where('ogrencino','=',session('no'))->update(['danisman' => $ad->ad]);
                     }
                     } catch (\Throwable $th) {
                         
@@ -103,8 +99,7 @@ class verialmaislemleri extends Controller
                         for ($i=25; $i < 30; $i++) { 
                         $ad = DB::table('danısmens')->find(6);
                         DB::table('atamas')->where('id','=',$i)->update(['danisman' => $ad->ad]);
-                        DB::table('ogrencikayit_bilgis')->where('id','=',session('LoggedUser'))->update(['danisman' => $ad->ad]);
-
+                        DB::table('ogrencikayit_bilgis')->where('ogrencino','=',session('no'))->update(['danisman' => $ad->ad]);
                     }
                     } catch (\Throwable $th) {
                         
@@ -167,6 +162,11 @@ class verialmaislemleri extends Controller
         return view('ogrencianasayfa', $data);
  
     }
+    function bbilgileriyolla(){
+        $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
+        return view('belgeler', $data);
+ 
+    }
     
     public function onaylanmadurumu()
     {      
@@ -175,7 +175,9 @@ class verialmaislemleri extends Controller
        
           switch ($ogrenci) {
            case '[{"durum":"onaylandi"}]':
-            return view('belgeler');
+            $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
+            return view('belgeler', $data);
+            
                break;
            
            default:

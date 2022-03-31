@@ -45,7 +45,8 @@
                   {{ Session::get('fail') }}
                </div>
             @endif
-          <table class="table table-dark table-sm" >
+            
+                      <table class="table table-dark table-sm" >
           @foreach($ogrencisi as $ogr)
                 <tr>
                         <td name="ogrencisi[]" >{{$ogr->ogrno}}</td>

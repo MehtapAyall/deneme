@@ -38,12 +38,12 @@ class kaydet extends Controller
     public function proje_post(Request $req)
     {   
                
-        $deger=$req->input('baslik');
+        $deger=$req->input('amac');
         $sonuc = str_word_count($deger);
         $deger2=$req->input('meteryal');
-        $sonuc2 = str_word_count($deger);
+        $sonuc2 = str_word_count($deger2);
 
-        if((int)$sonuc < 200 && (int)$sonuc2 < 300)
+        if((int)$sonuc < 5 && (int)$sonuc2 < 5)
         {
             return  back()->with('fail','Amac, önem, kapsam 200 kelimeden, meteryal yöntem olanak 300 kelimeden fazla olmalıdır');
             
@@ -122,6 +122,7 @@ class kaydet extends Controller
             $file->move('public/begeler/', $filename);
             $belge->pdf3 = $filename;
         }
+        $belge->danisman=$req->danisman;
       $belge->save();
       return redirect('ogrAnasayfa');
     }

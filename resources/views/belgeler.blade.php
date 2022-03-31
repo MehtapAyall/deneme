@@ -49,6 +49,8 @@
           <td><input type="file" name="pdf2" required class="course form-control" style="width: 300px;"> </td></tr>
           <tr><td> <input type="file" name="bel3" required class="course form-control" style="width: 300px;"> </td>
           <td><input type="file" name="pdf3" required class="course form-control" style="width: 300px;"> </td></tr>
+          
+          <td><input type="hidden"name="danisman" value="{{ $LoggedUserInfo['danisman'] }}"></td>
           <tr><td> <button class="btn btn-danger" onclick="location=''" style="height:50x; width:150px;">Yükle</button> </td></tr>
         </table>
     </form>
