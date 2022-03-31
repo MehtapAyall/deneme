@@ -50,11 +50,16 @@ Route::get('/ogrencibilgileri', function () {
 Route::get('/danisanekle', function () {
     return view('danisanekle');
 });
+Route::get('/belgeler', function () {
+    return view('belgeler');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/ogrencibilgileri',[App\Http\Controllers\verialmaislemleri::class, 'bilgileriyolla']);
 Route::post('/kayitol', [App\Http\Controllers\verialmaislemleri::class, 'verialma'])->name('kayitol');
+Route::post('/belgeler', [App\Http\Controllers\kaydet::class, 'belgeler'])->name('belge');
+
 Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
 Route::get('/yonetici',[App\Http\Controllers\Vericekme::class,'goster'])->name('goster');
 Route::get('/danismananasayfa',[App\Http\Controllers\DanismanController::class,'ogrencileri'])->name('dogr');

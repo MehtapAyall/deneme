@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Danısmen;
 use App\Models\OgrencikayitBilgi;
-
+use App\Models\Belgeler;
 use App\Models\Projeler;
 use App\Models\proje_basvuru;
 use Illuminate\Support\Facades\DB;
@@ -56,4 +56,37 @@ class kaydet extends Controller
 
         return redirect('ogrencianasayfa');
     }
+
+    public function belgeler(Request $req)
+    {
+        $belge = new Belgeler();
+        $belge->ogrno = $req->input('num');
+        if($req->hasfile('bel1'))
+        {
+            $file = $req->file('bel1');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('public/begeler/', $filename);
+            $belge->belge1 = $filename;
+        }
+        if($req->hasfile('bel2'))
+        {
+            $file = $req->file('bel2');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('public/begeler/', $filename);
+            $belge->belge2 = $filename;
+        }
+        if($req->hasfile('bel3'))
+        {
+            $file = $req->file('bel3');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('public/begeler/', $filename);
+            $belge->belge3 = $filename;
+        }
+      $belge->save();
+      return redirect('ogrencianasayfa');
+    }
+
 }

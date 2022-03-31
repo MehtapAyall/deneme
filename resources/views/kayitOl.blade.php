@@ -51,8 +51,8 @@
             <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text" name="ogrencino"> </th></tr>
             <tr><td style="text-align:right;"> <label for="">Ad:</label></td> <th> <input type="text" name="ogrenciadi" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">Soyad:</label></td> <th> <input type="text" name="ogrencisoyad"></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" name="ogrencisifre" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre Tekrarı:</label></td> <th> <input type="text" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="password" name="ogrencisifre" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre Tekrarı:</label></td> <th> <input type="password" ></th></tr>
             <tr><td style="text-align:right;"> <label for="">E-posta:</label></td> <th> <input type="text" name="ogrenciemail"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Telefon:</label></td> <th> <input type="tel" name="ogrencitelefon"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Fakülte:</label></td> <th> <input type="text" name="ogrencifakulte"></th></tr>

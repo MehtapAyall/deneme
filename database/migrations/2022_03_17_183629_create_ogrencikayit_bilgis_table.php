@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('ogrencifakulte')->nullable();
             $table->string('ogrencibolum')->nullable();
             $table->string('danisman')->nullable();
-
+            
             $table->timestamps();
             });
         

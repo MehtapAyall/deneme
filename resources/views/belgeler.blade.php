@@ -38,23 +38,16 @@
     </header>
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});">
     <div class="container">
-    
-        <div class="d-flex h-100 flex-column text-light justify-content-center" >
-          <table class="table table-dark table-sm" >
-          @foreach($ogrencisi as $ogr)
-                <tr>
-                    
-                        <td name="ogrencisi[]" >{{$ogr->ograd}}</td>
-                        <td name="ogrencisi[]" >{{$ogr->ogrno}}</td>
-                        <td name="ogrencisi[]" > <button name='{{$ogr->ogrno}}'></button> </td>
-                        
-                </tr>
-            @endforeach
-           
-          </table>
-         <a href="/resimler/indirme.docx" download>indir</a>
-        </div> 
-     
+    <form method="post" action="{{route('belge')}}" enctype="multipart/form-data">
+        @csrf
+        <table>
+          <tr><td> <input type="text" name="num" placeholder="numarasınızı giriniz"> </td></tr>
+          <tr><td> <input type="file" name="bel1" required class="course form-control" style="width: 300px;"> </td></tr>
+          <tr><td> <input type="file" name="bel2" required class="course form-control" style="width: 300px;"> </td></tr>
+          <tr><td> <input type="file" name="bel3" required class="course form-control" style="width: 300px;"> </td></tr>
+          <tr><td> <button class="btn btn-danger" onclick="location=''" style="height:50x; width:150px;">Yükle</button> </td></tr>
+        </table>
+    </form>
     </div>
    
         </section>
