@@ -42,9 +42,13 @@
         @csrf
         <table>
           <tr><td> <input type="text" name="num" placeholder="numarasınızı giriniz"> </td></tr>
-          <tr><td> <input type="file" name="bel1" required class="course form-control" style="width: 300px;"> </td></tr>
-          <tr><td> <input type="file" name="bel2" required class="course form-control" style="width: 300px;"> </td></tr>
-          <tr><td> <input type="file" name="bel3" required class="course form-control" style="width: 300px;"> </td></tr>
+          <tr><td style="background-color:white;">Word belgelerinizi ekleyiniz</td><td style="background-color:white;">PDF belgelerinizi ekleyiniz</td></tr>
+          <tr><td> <input type="file" name="bel1" required class="course form-control" style="width: 300px;"> </td>
+          <td><input type="file" name="pdf1" required class="course form-control" style="width: 300px;"> </td></tr>
+          <tr><td> <input type="file" name="bel2" required class="course form-control" style="width: 300px;"> </td>
+          <td><input type="file" name="pdf2" required class="course form-control" style="width: 300px;"> </td></tr>
+          <tr><td> <input type="file" name="bel3" required class="course form-control" style="width: 300px;"> </td>
+          <td><input type="file" name="pdf3" required class="course form-control" style="width: 300px;"> </td></tr>
           <tr><td> <button class="btn btn-danger" onclick="location=''" style="height:50x; width:150px;">Yükle</button> </td></tr>
         </table>
     </form>

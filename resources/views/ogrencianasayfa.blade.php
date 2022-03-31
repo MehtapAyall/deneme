@@ -45,6 +45,11 @@
     <div class="container"><br><br>
 
       <form action='/ogrencianasayfa' method='post'>
+      @if(Session::get('fail'))
+            <div class="alert alert-danger">
+                  {{ Session::get('fail') }}
+               </div>
+      @endif
         {{ csrf_field() }}
         <table style="background-color:#bbabd8; height:500px; width:900px;" >
           <tr><td colspan="2" style="text-align:center"> <input type="text" name="baslik" placeholder="Proje başlığını girin" style="width:400px; height:50px;"> </td></tr>
@@ -68,6 +73,10 @@
         
         </table>
         </form>
+
+
+
+
     </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
