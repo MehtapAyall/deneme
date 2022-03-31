@@ -20,10 +20,11 @@ class DanismanController extends Controller
     public function ogrencileri()
     {
        
-       $ogrencisi=DB::table('atamas')->where('danisman','=',session('dUser'))->get();            
+       $ogrencisi=DB::table('proje_basvurus')->where('danisman','=',session('dUser'))->get();            
        return view('danismananasayfa',['ogrencisi'=> $ogrencisi]);
         
     }
+    
         
  
     

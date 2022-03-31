@@ -51,7 +51,7 @@ class kaydet extends Controller
         $al->anahtar5 = $req->input('anahtar5');
         $al->ogrno = $req->input('num');
         $al->danisman = $req->input('danisman');
-        $al->danisman = $req->input('durum');
+        $al->durum = $req->input('durum');
 
         $al->save();       
 
