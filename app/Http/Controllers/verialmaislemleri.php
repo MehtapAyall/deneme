@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\OgrencikayitBilgi;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
-
+use Illuminate\Support\Collection;
 use Validator, Input, Redirect;
 use App\Models\Atama;
+use App\Models\proje_basvuru;
 use App\Models\Danısmen;
 use Illuminate\Support\Facades\DB;
 
@@ -146,6 +147,7 @@ class verialmaislemleri extends Controller
             //check password
             if(Hash::check($request->ogrencisifre, $userInfo->ogrencisifre)){
                 $request->session()->put('LoggedUser', $userInfo->id);
+                $request->session()->put('no', $userInfo->ogrencino);
                 $request->session()->put('danisman', $userInfo->danisman);
                 return redirect('ogrAnasayfa');
 
@@ -164,6 +166,31 @@ class verialmaislemleri extends Controller
         $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
         return view('ogrencianasayfa', $data);
  
+    }
+    
+    public function onaylanmadurumu()
+    {      
+       $ogrenci=proje_basvuru::where('ogrno','=',session('no'))->get('durum');
+       
+       
+          switch ($ogrenci) {
+           case '[{"durum":"onaylandi"}]':
+            return view('belgeler');
+               break;
+           
+           default:
+           return back()->with('fail','Projeniz onaylanmadığı için rapor yükleyemezsiniz.');
+               break;
+       }
+       
+        
+    }
+    public function ogrencileriprj()
+    {
+       
+       $ogrencisi=DB::table('proje_basvurus')->where('ogrno','=',session('no'))->get();            
+       return view('benimbasvurularim',['ogrencisi'=> $ogrencisi]);
+        
     }
     
     

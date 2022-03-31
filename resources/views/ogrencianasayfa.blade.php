@@ -26,10 +26,14 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Danışman</a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/benimbasvurularim">Başvurularım</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/ogrencibilgileri">Bilgilerim</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/">Çıkış Yap</a>
         </li>
@@ -45,6 +49,11 @@
     <div class="container"><br><br>
 
       <form action='/ogrencianasayfa' method='post'>
+      @if(Session::get('fail'))
+            <div class="alert alert-danger">
+                  {{ Session::get('fail') }}
+               </div>
+            @endif
         {{ csrf_field() }}
         <table style="background-color:#bbabd8; height:500px; width:900px;" >
           <tr><td colspan="2" style="text-align:center"> <input type="text" name="baslik" placeholder="Proje başlığını girin" style="width:400px; height:50px;"> </td></tr>
@@ -67,6 +76,10 @@
           <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrAnasayfa'">Benzerlik</button></td></tr>
         
         </table>
+        </form>
+        <form action="{{route('raporagec')}}" method="post">
+          @csrf
+          <button>rapor</button>
         </form>
     </div>
     </section>
