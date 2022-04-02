@@ -41,7 +41,7 @@
     <form method="post" action="{{route('belge')}}" enctype="multipart/form-data">
         @csrf
         <table>
-          <tr><td> <input type="text" name="num" placeholder="numarasınızı giriniz"> </td></tr>
+          <tr><td> <input type="hidden" name="num" value="{{ $LoggedUserInfo['ogrencino'] }}"> </td></tr>
           <tr><td style="background-color:white;">Word belgelerinizi ekleyiniz</td><td style="background-color:white;">PDF belgelerinizi ekleyiniz</td></tr>
           <tr><td> <input type="file" name="bel1" required class="course form-control" style="width: 300px;"> </td>
           <td><input type="file" name="pdf1" required class="course form-control" style="width: 300px;"> </td></tr>

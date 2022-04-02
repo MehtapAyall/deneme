@@ -64,8 +64,8 @@ class kaydet extends Controller
         $al->durum = $req->input('durum');
 
         $al->save();       
-
-        return redirect('ogrAnasayfa');
+        
+        return back()->with('message','Projeniz Başarıyla eklendi');
         }
     }
 

@@ -72,6 +72,7 @@ Route::post('/belgeler', [App\Http\Controllers\kaydet::class, 'belgeler'])->name
 Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
 Route::get('/yonetici',[App\Http\Controllers\Vericekme::class,'goster'])->name('goster');
 Route::get('/danismananasayfa',[App\Http\Controllers\DanismanController::class,'ogrencileri'])->name('dogr');
+
 Route::post('/dnmGiris',[App\Http\Controllers\DanismanController::class,'daniskontrol'])->name('daniskontrol');
 
 
@@ -83,3 +84,9 @@ Route::post('ogrencianasayfa','App\Http\Controllers\kaydet@proje_post');
 
 Route::post('/benimbasvurularim',[App\Http\Controllers\verialmaislemleri::class,'onaylanmadurumu'])->name('raporagec');
 Route::get('/benimbasvurularim',[App\Http\Controllers\verialmaislemleri::class,'ogrencileriprj']);
+
+Route::get('/redtez/{id}',[App\Http\Controllers\DanismanController::class,'redtez']);
+Route::get('/onaytez/{id}',[App\Http\Controllers\DanismanController::class,'onaytez']);
+Route::get('/onay/{id}',[App\Http\Controllers\DanismanController::class,'onay']);
+Route::get('/red/{id}',[App\Http\Controllers\DanismanController::class,'red']);
+Route::get('/rpr/{id}',[App\Http\Controllers\verialmaislemleri::class,'rpr']);

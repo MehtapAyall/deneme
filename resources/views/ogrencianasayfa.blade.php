@@ -50,10 +50,17 @@
 
       <form action='/ogrencianasayfa' method='post'>
       @if(Session::get('fail'))
+      
             <div class="alert alert-danger">
                   {{ Session::get('fail') }}
                </div>
             @endif
+            @if(Session::get('message'))
+      
+      <div class="alert alert-danger">
+            {{ Session::get('message') }}
+         </div>
+      @endif
         {{ csrf_field() }}
         <table style="background-color:#bbabd8; height:500px; width:900px;" >
           <tr><td colspan="2" style="text-align:center"> <input type="text" name="baslik" placeholder="Proje başlığını girin" style="width:400px; height:50px;"> </td></tr>
@@ -70,17 +77,14 @@
             <input type="hidden"name="durum" value="beklemede">
             </td>
           </tr>
-          <tr><td colspan="2" style="text-align:center"> <input type="text" name="num" placeholder="Numaranızı giriniz" style="width:400px; height:30px;"> </td></tr>
+          <tr><td colspan="2" style="text-align:center"> <input type="hidden" name="num" value="{{ $LoggedUserInfo['ogrencino'] }}" style="width:400px; height:30px;"> </td></tr>
           <tr><td colspan="2" style="text-align:center"> </td></tr>
           <tr> <td colspan="2" style="text-align:center"> <button style=" height:50px; width: 200px;" class="btn btn-warning" onclick="location='/ogrencianasayfa'">Başvur</button> 
           <butto style=" height:50px; width:200px;" class="btn btn-warning" onclick="location='/ogrAnasayfa'">Benzerlik</button></td></tr>
         
         </table>
         </form>
-        <form action="{{route('raporagec')}}" method="post">
-          @csrf
-          <button>rapor</button>
-        </form>
+        
 
 
 

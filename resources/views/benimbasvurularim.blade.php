@@ -20,13 +20,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto ">
+    <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
         </li>
-            <li class="nav-item">
-          <a class="nav-link" href="#">Atanan Öğrenciler</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Danışman</a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/benimbasvurularim">Başvurularım</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/ogrencibilgileri">Bilgilerim</a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="/">Çıkış Yap</a>
         </li>
@@ -47,6 +54,8 @@
             @endif
             
                       <table class="table table-dark table-sm" >
+                        <tr><th>Öğrenci Numarası</th><th>Projesi</th><th></th><th></th><th>Projenin durumu</th><th>Tez Durum</th>
+                      <th>Rapor Yükle</th></tr>
           @foreach($ogrencisi as $ogr)
                 <tr>
                         <td name="ogrencisi[]" >{{$ogr->ogrno}}</td>
@@ -54,14 +63,15 @@
                         <td name="ogrencisi[]" >{{$ogr->amac}}</td>
                         <td name="ogrencisi[]" >{{$ogr->meteryal}}</td>
                         <td name="ogrencisi[]" >{{$ogr->durum}}</td>
-                        
+                        <td name="ogrencisi[]" >{{$ogr->durum2}}</td>
+                        <td><button><a class="btn btn-succsess"href="{{url('rpr',$ogr->id)}}">RApor Ekle</a></button>   </td>
                         <td>  <form action="{{route('raporagec')}}" method="post">  
                              @csrf
                             <button >rapor</button></form>
                                                      </td>       
 
                         
-                        <td name="ogrencisi[]" >  </td>
+                     
                         
                 </tr>
             @endforeach

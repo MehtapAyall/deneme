@@ -339,8 +339,7 @@ label {
 
 button {
   border-radius: 0;
-  width: 200px;
-  height: 200px;
+  width: auto;
   border: 0ch;
   
   border-radius: 1%;

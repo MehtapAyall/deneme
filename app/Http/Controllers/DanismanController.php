@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Atama;
+use App\Models\Proje_basvuru;
 
 use App\Models\OgrencikayitBilgi;
 use Illuminate\Support\Facades\Hash;
@@ -20,8 +21,16 @@ class DanismanController extends Controller
     public function ogrencileri()
     {
        
-       $ogrencisi=DB::table('proje_basvurus')->where('danisman','=',session('dUser'))->get();            
-       return view('danismananasayfa',['ogrencisi'=> $ogrencisi]);
+       $ogrencisi=DB::table('proje_basvurus')->where('danisman','=',session('dUser'))->get();   
+       $projesi=DB::table('belgelers')->where('danisman','=',session('dUser'))->get();          
+       return view('danismananasayfa',['ogrencisi'=> $ogrencisi],['projesi'=>$projesi]);
+        
+    }
+    public function ogrencileripr()
+    {
+       
+                  
+       return view('danismananasayfa',['projesi'=> $projesi]);
         
     }
     
@@ -55,5 +64,45 @@ class DanismanController extends Controller
                 return back()->with('fail','sifre Yanlıs');
             }
         }
+    }
+    public function onay($id)
+    {
+
+        $data=proje_basvuru::find($id);
+
+        $data->durum='onay';
+        $data->save();
+
+        return redirect()->back();
+    }
+    public function onaytez($id)
+    {
+
+        $data=proje_basvuru::find($id);
+
+        $data->durum2='onay';
+        $data->save();
+
+        return redirect()->back();
+    }
+    public function redtez($id)
+    {
+
+        $data=proje_basvuru::find($id);
+
+        $data->durum2='red';
+        $data->save();
+
+        return redirect()->back();
+    }
+    public function red($id)
+    {
+
+        $data=proje_basvuru::find($id);
+
+        $data->durum='red';
+        $data->save();
+
+        return redirect()->back();
     }
 }
