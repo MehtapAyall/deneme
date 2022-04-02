@@ -168,31 +168,12 @@ class verialmaislemleri extends Controller
  
     }
     
-    public function onaylanmadurumu()
-    {      
-       $ogrenci=proje_basvuru::where('ogrno','=',session('no'))->get('durum');
-       
-       
-          switch ($ogrenci) {
-           case '[{"durum":"onay"}]':
-            $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
-            return view('belgeler', $data);
-            
-               break;
-           
-           default:
-           return back()->with('fail','Projeniz onaylanmadığı için rapor yükleyemezsiniz.');
-               break;
-       }
-    
-        
-    
-    }
+   
     public function rpr($id)
     {
 
-        $ogrenci=proje_basvuru::find($id);
-        switch ($ogrenci->durum) {
+        $ogrenci=proje_basvuru::where('id','=',$id)->get('durum');
+        switch ($ogrenci) {
             case '[{"durum":"onay"}]':
              $data = ['LoggedUserInfo'=>OgrencikayitBilgi::where('id','=', session('LoggedUser'))->first()];
              return view('belgeler', $data);
@@ -200,6 +181,7 @@ class verialmaislemleri extends Controller
                 break;
             
             default:
+            echo $ogrenci;
             return back()->with('fail','Projeniz onaylanmadığı için rapor yükleyemezsiniz.');
                 break;
             }
