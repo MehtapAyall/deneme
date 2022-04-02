@@ -72,7 +72,6 @@ Route::post('/belgeler', [App\Http\Controllers\kaydet::class, 'belgeler'])->name
 Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
 Route::get('/yonetici',[App\Http\Controllers\Vericekme::class,'goster'])->name('goster');
 Route::get('/danismananasayfa',[App\Http\Controllers\DanismanController::class,'ogrencileri'])->name('dogr');
-
 Route::post('/dnmGiris',[App\Http\Controllers\DanismanController::class,'daniskontrol'])->name('daniskontrol');
 
 

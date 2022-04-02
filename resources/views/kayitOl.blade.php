@@ -58,16 +58,6 @@
             <tr><td style="text-align:right;"> <label for="">Fakülte:</label></td> <th> <input type="text" name="ogrencifakulte"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Bölüm:</label></td> <th> <input type="text" name="ogrencibolum"></th></tr>
             <tr><td style="text-align:right;"> <label for="">Sınıf:</label></td> <th> <input type="text" name="ogrencisinif" ></th></tr>
-            <tr><td style="text-align:right;"> <label for="">Danışman Seç:</label></td> <th>
-            <select name="danisman">
-                <option> Danışman Seçiniz </option>
-                <option> Mustafa Günbatımı </option>
-                <option> Ayşe Solmaz </option>
-                <option> Hüseyin Okyanusoğlu </option>
-                <option> Günnur Salar </option>
-                <option> Müzeyyen Korkmaz </option>
-            </select>
-            </th></tr>
             <tr><td style="text-align:right;"><button class="btn btn-danger" onclick="location='/sifre'">Şifremi Unutum</button> </td><th><button class="btn btn-warning" onclick="location='/ogrGiris'">Kayıt Ol</button> </th></tr>
             </table></center>
         </form>

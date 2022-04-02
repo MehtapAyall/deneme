@@ -49,6 +49,7 @@
                         <td name="ogrencisi[]" >{{$ogr->amac}}</td>
                         <td name="ogrencisi[]" >{{$ogr->meteryal}}</td>
                         <td name="ogrencisi[]" >{{$ogr->durum}}</td>
+                        
                         <td><button><a class="btn btn-succsess"href="{{url('onay',$ogr->id)}}">onay</a></button>   </td>
                         <td><button><a class="btn btn-succsess"href="{{url('red',$ogr->id)}}">red</a></button>   </td>
                         
@@ -59,33 +60,27 @@
            
           </table>
          
+          <table id="asagi" class="table table-dark table-sm" >
+        <tr><th colspan="9" style="text-align:center">Öğrenci Belgeleri</th></tr>
+        @foreach($projesi as $ogr)
+            <tr>
+              <td name="projesi[]" >{{$ogr->ogrno}}</td>
+              <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->belge1}}" download>{{$ogr->belge1}}</a></td>
+              <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->belge2}}" download>{{$ogr->belge2}}</a></td>
+              <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->belge3}}" download>{{$ogr->belge3}}</a></td>
+              <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->pdf1}}" download>{{$ogr->pdf1}}</a></td>
+              <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->pdf2}}" download>{{$ogr->pdf2}}</a></td>
+              <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->pdf3}}" download>{{$ogr->pdf3}}</a></td>
+              <td><button><a class="btn btn-succsess"href="{{url('onaytez',$ogr->id)}}">onay</a></button>   </td>
+              <td><button><a class="btn btn-succsess"href="{{url('redtez',$ogr->id)}}">red</a></button>   </td>
+                           
+            </tr>
+        @endforeach
+      </table>
+
         </div> 
      
     </div>
-    <div class="container">
-    
-    <div class="d-flex h-100 flex-column text-light justify-content-center" >
-      <table id="asagi" class="table table-dark table-sm" >
-        <tr><th>Öğrenci Numarası</th><th>Raporun </th><th>Word</th><th>Hali</th><th>Durum</th><th><a href="#ana">Anasayfa</a></th></tr>
-        @foreach($projesi as $ogr)
-            <tr>
-            <a href="/resimler/indirme.docx" download>indir</a>
-                    <td name="projesi[]" >{{$ogr->ogrno}}</td>
-                    <td name="projesi[]"><a  href="/public/belgeler/{{$ogr->belge1}}" download>indir</a>{{$ogr->belge1}}</td>
-                    <td name="projesi[]" >{{$ogr->belge2}}</td>
-                    <td name="projesi[]" >{{$ogr->belge3}}</td>
-                    <td name="projesi[]" >{{$ogr->pdf1}}</td>
-                    <td><button><a class="btn btn-succsess"href="{{url('onaytez',$ogr->id)}}">onay</a></button>   </td>
-                    <td><button><a class="btn btn-succsess"href="{{url('redtez',$ogr->id)}}">red</a></button>   </td>
-                    
-                    
-                    
-            </tr>
-        @endforeach
-       
-      </table>
-     
-    </div> 
  
 </div>
    

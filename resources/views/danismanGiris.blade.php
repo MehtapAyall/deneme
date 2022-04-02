@@ -30,9 +30,10 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/dnmGiris">Danışman Giriş</a>
-
         </li>
-        
+        <li class="nav-item">
+          <a class="nav-link" href="/sistemyont">Yönetici</a>
+        </li>
       </ul>
 
     </div>

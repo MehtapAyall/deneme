@@ -29,8 +29,10 @@
           <a class="nav-link" href="/ogrGiris">Öğrenci Giriş</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/dnmGiris">Danışman Giriş</a>
-          
+          <a class="nav-link" href="/dnmGiris">Danışman Giriş</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sistemyont">Yönetici</a>
         </li>
       </ul>
 
@@ -53,9 +55,9 @@
             <tr><td colspan="2" style="text-align:center;"><h1>Öğrenci Giriş Sayfası</h1></td></tr>
             <tr><td style="text-align:right;"> <label for="">Öğrenci Numarası:</label></td> <th> <input type="text"  name="ogrencino" value="{{ old('ogrencino') }}"> <span class="text-danger">@error('no'){{ $message }} @enderror</span> </th></tr>
             <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="password"  name="ogrencisifre"><span class="text-danger">@error('sifre'){{ $message }} @enderror</span></th></tr>
-            <tr><td><button type="submit"class="btn primary btn-warning" onclick="location='/ogrAnasayfa'" >Giriş Yap</button> </td></tr>
+            <tr><td style="text-align:center;" colspan="2"><button type="submit"class="btn primary btn-warning" onclick="location='/ogrAnasayfa'" >Giriş Yap</button> </td></tr>
             </table></form>
-            <table><center><td style="text-align:right;"><button class="btn btn-danger" onclick="location='/kayitol'">Kayıt Ol</button></center></td></table>
+            <table class="table table-dark table-striped"><td style="text-align:center;" colspan="2"><button class="btn btn-danger" onclick="location='/kayitol'">Kayıt Ol</button></td></table>
         </div>
       </div>
     </section>

@@ -27,6 +27,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Danışman</a>
         </li>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/benimbasvurularim">Başvurularım</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/ogrencibilgileri">Bilgilerim</a>
         </li>
@@ -42,16 +45,17 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});">
       <div class="container">
         <div class="d-flex h-100 flex-column text-light justify-content-center" >
-          <table class="table table-dark table-sm" >
-            <tr><td >Öğrenci Numara:</td> <td >{{ $LoggedUserInfo['ogrencino'] }}</td></tr>
-            <tr><td >İsim:</td> <td >{{ $LoggedUserInfo['ogrenciadi'] }}</td></tr>
-            <tr><td >Soyisim:</td> <td >{{ $LoggedUserInfo['ogrencisoyad'] }}</td></tr>
-            <tr><td >Telefon:</td> <td >{{ $LoggedUserInfo['ogrencitelefon'] }}</td></tr>
-            <tr><td >E-mail:</td> <td >{{ $LoggedUserInfo['ogrenciemail'] }} </td> </tr>
-            <tr><td >Fakülte:</td> <td >{{ $LoggedUserInfo['ogrencifakulte'] }} </td> </tr>
-            <tr><td >Bölüm:</td> <td >{{ $LoggedUserInfo['ogrencibolum'] }}</td></tr>
-            <tr><td >Sınıf:</td> <td >{{ $LoggedUserInfo['ogrencisinif'] }}</td></tr>
-            <tr><td >Danisman:</td> <td >{{ $LoggedUserInfo['danisman'] }}</td></tr>
+          <table class="table table-dark table-sm" style="width:500px; height:800px;">
+            <tr><th colspan="2"style="text-align:center">Kişisel Bilgilerim</th></tr>
+            <tr><td style="text-align:right">Öğrenci Numara:</td> <td>{{ $LoggedUserInfo['ogrencino'] }}</td></tr>
+            <tr><td style="text-align:right">İsim:</td> <td >{{ $LoggedUserInfo['ogrenciadi'] }}</td></tr>
+            <tr><td style="text-align:right">Soyisim:</td> <td >{{ $LoggedUserInfo['ogrencisoyad'] }}</td></tr>
+            <tr><td style="text-align:right">Telefon:</td> <td >{{ $LoggedUserInfo['ogrencitelefon'] }}</td></tr>
+            <tr><td style="text-align:right">E-mail:</td> <td >{{ $LoggedUserInfo['ogrenciemail'] }} </td> </tr>
+            <tr><td style="text-align:right">Fakülte:</td> <td >{{ $LoggedUserInfo['ogrencifakulte'] }} </td> </tr>
+            <tr><td style="text-align:right">Bölüm:</td> <td >{{ $LoggedUserInfo['ogrencibolum'] }}</td></tr>
+            <tr><td style="text-align:right">Sınıf:</td> <td >{{ $LoggedUserInfo['ogrencisinif'] }}</td></tr>
+            <tr><td style="text-align:right">Danisman:</td> <td >{{ $LoggedUserInfo['danisman'] }}</td></tr>
           </table>
         </div> 
       </div>   
