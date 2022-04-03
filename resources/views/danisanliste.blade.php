@@ -47,6 +47,33 @@
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container" >
        
+      <br><br>
+          <table class="table table-light">
+            <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Unvan</th>
+                <th>E Posta</th>
+            </tr>
+            </thead>
+           
+            <tbody>
+                <tr>
+                <tbody>
+            @foreach($danısmen as $key => $item)
+                <tr>             
+                    <td>{{$item['ad']}}</td>
+                    <td>{{$item['soyad']}}</td>
+                    <td>{{$item['unvan']}}</td>
+                    <td>{{$item['ePosta']}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+                    
+                </tr>
+            </tbody>
+        </tale>
 
       </div>
     </section>

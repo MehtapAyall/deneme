@@ -45,8 +45,8 @@
             
             <table class="table table-dark table-striped">
             <tr><td colspan="2" style="text-align:center;"><h1>Yönetici Giriş Sayfası</h1></td></tr>
-            <tr><td style="text-align:right;"> <label for="">ID:</label></td> <th> <input type="text" > </th></tr>
-            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="text" ></th></tr>
+            <tr><td style="text-align:right;"> <label for="">ID:</label></td> <th> <input type="text" name="ad"> </th></tr>
+            <tr><td style="text-align:right;"> <label for="">Şifre:</label></td> <th> <input type="password" name="sifre "></th></tr>
             <tr><td style="text-align:right;"> </td><th><button class="btn btn-warning" onclick="location='/yonetici'">Giriş Yap</button> </th></tr>
             </table>
         </div>

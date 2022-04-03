@@ -60,6 +60,14 @@ Route::get('/danismanogr', function () {
 Route::get('/benimbasvurularim', function () {
     return view('benimbasvurularim');
 });
+
+Route::get('/ogrliste', function () {
+    return view('ogrliste');
+});
+
+Route::get('/danisanliste', function () {
+    return view('danisanliste');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -70,7 +78,11 @@ Route::post('/kayitol', [App\Http\Controllers\verialmaislemleri::class, 'verialm
 Route::post('/belgeler', [App\Http\Controllers\kaydet::class, 'belgeler'])->name('belge');
 
 Route::post('/ogrGiris',[App\Http\Controllers\verialmaislemleri::class,'kontrol'])->name('kayitkontrol');
-Route::get('/yonetici',[App\Http\Controllers\Vericekme::class,'goster'])->name('goster');
+
+Route::get('/ogrliste',[App\Http\Controllers\Vericekme::class,'goster'])->name('goster');
+Route::get('/danisanliste',[App\Http\Controllers\Vericekme::class,'goster2'])->name('goster2');
+
+
 Route::get('/danismananasayfa',[App\Http\Controllers\DanismanController::class,'ogrencileri'])->name('dogr');
 Route::post('/dnmGiris',[App\Http\Controllers\DanismanController::class,'daniskontrol'])->name('daniskontrol');
 
