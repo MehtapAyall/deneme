@@ -28,8 +28,12 @@
           <a class="nav-link" href="#asagi">Öğrenci Belgeleri</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/danismanbilgileri">Bilgilerim</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/">Çıkış Yap</a>
         </li>
+        
       </ul>
 
     </div>

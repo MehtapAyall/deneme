@@ -105,4 +105,9 @@ class DanismanController extends Controller
 
         return redirect()->back();
     }
+    function danismanbilgileriyolla(){
+        $data = ['LoggedUserInfo'=>Danısmen::where('ad','=', session('dUser'))->first()];
+        return view('danismanbilgilerim', $data);
+ 
+    }
 }

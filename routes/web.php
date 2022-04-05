@@ -60,6 +60,10 @@ Route::get('/danismanogr', function () {
 Route::get('/benimbasvurularim', function () {
     return view('benimbasvurularim');
 });
+
+Route::get('/danismanbilgileri', function () {
+    return view('danismanbilgilerim');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -89,3 +93,7 @@ Route::get('/onaytez/{id}',[App\Http\Controllers\DanismanController::class,'onay
 Route::get('/onay/{id}',[App\Http\Controllers\DanismanController::class,'onay']);
 Route::get('/red/{id}',[App\Http\Controllers\DanismanController::class,'red']);
 Route::get('/rpr/{id}',[App\Http\Controllers\verialmaislemleri::class,'rpr']);
+Route::get('/tez/{id}',[App\Http\Controllers\verialmaislemleri::class,'tez']);
+Route::get('/tezyukleme/{id}',[App\Http\Controllers\verialmaislemleri::class,'tezyukleme']);
+
+Route::get('/danismanbilgileri',[App\Http\Controllers\DanismanController::class, 'danismanbilgileriyolla']);
