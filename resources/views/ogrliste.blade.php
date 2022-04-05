@@ -46,7 +46,35 @@
 
     <section class="koyu_arkaplan" id="hero" style=" background: url({{url('/resimler/arka.jpg')}});" >
       <div class="container" >
-       
+        <br><br>
+          <table class="table table-light">
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Fakülte</th>
+                <th>Bölüm</th>
+                <th>Sınıf</th>
+                <th>Telefon</th>
+                <th>E Posta</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($ogrencikayit_bilgis as $key => $item)
+                <tr>                   
+                      <td>{{$item['ogrencino']}}</td>
+                      <td>{{$item['ogrenciadi']}}</td>
+                      <td>{{$item['ogrencisoyad']}}</td>
+                      <td>{{$item['ogrencifakulte']}}</td>
+                      <td>{{$item['ogrencibolum']}}</td>
+                      <td>{{$item['ogrencisinif']}}</td>
+                      <td>{{$item['ogrencitelefon']}}</td>
+                      <td>{{$item['ogrenciemail']}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </tale>
 
       </div>
     </section>

@@ -25,8 +25,6 @@
           <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Danışman</a>
-        </li><li class="nav-item">
           <a class="nav-link" href="/benimbasvurularim">Başvurularım</a>
         </li>
 
